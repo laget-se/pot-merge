@@ -3,6 +3,7 @@
   "version": "1.0.3",
   "description": "Use for merging of pot-files. Takes care of contexttags",
   "main": "pot-merge.js",
+  "bin": "pot-merge.js",
   "dependencies": {
     "promise": "^7.0.4",
     "yargs": "^4.6.0"

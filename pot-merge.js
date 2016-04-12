@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var fs = require('fs');
 var Promise = require('promise');
 var argv = require('yargs')
