@@ -1,0 +1,16 @@
+{
+  "name": "@lagetse/pot-merge",
+  "version": "1.0.3",
+  "description": "Use for merging of pot-files. Takes care of contexttags",
+  "main": "pot-merge.js",
+  "dependencies": {
+    "promise": "^7.0.4",
+    "yargs": "^4.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Micke Larsson",
+  "license": "ISC"
+}
