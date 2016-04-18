@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 var fs = require('fs');
 var Promise = require('promise');
-var argv = require('yargs')
-.usage('Usage: $0 -a [pot-file] -b [pot-file] -o [output pot-file]')
-.demand(['a', 'b', 'o'])
-.argv;
+
 
 var readFile = Promise.denodeify(fs.readFile);
 
@@ -177,11 +174,11 @@ SetOfBlocks.prototype.getDuplicate = function(hash) {
         });
     }
 
-    var a = argv.a || argv._[0];
-    var b = argv.b || argv._[1];
-    var o = argv.o || argv._[2];
 
-    run(a, b, o);
+    // Export methods for use elsewhere
+    module.exports.parseFile = parseFile;
+    module.exports.merge = merge;
+    module.exports.run = run;
 
 //todo:
 // 1. merga comments for block som ar samma
