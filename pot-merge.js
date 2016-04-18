@@ -161,6 +161,11 @@ SetOfBlocks.prototype.getDuplicate = function(hash) {
         return set;
     }
 
+    var mergePotContents = function(a, b) {
+        var outputData = merge(parseFile(a), parseFile(b));
+        return outputData.toStr();
+    }
+
     var writeFile = function(blocks, output){
         console.log('');
         console.log('writefile: '+blocks.toStr());
@@ -176,8 +181,7 @@ SetOfBlocks.prototype.getDuplicate = function(hash) {
 
 
     // Export methods for use elsewhere
-    module.exports.parseFile = parseFile;
-    module.exports.merge = merge;
+    module.exports.mergePotContents = mergePotContents;
     module.exports.run = run;
 
 //todo:
