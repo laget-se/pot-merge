@@ -115,7 +115,7 @@ SetOfBlocks.prototype.getDuplicate = function(hash) {
     var readBlock = function(lines) {
         var block = [];
         var line = lines.pop();
-        while(line !== "") {
+        while(line) {
             block.push(line);
             line = lines.pop();
         }
