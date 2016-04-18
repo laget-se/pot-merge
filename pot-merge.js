@@ -162,7 +162,7 @@ SetOfBlocks.prototype.getDuplicate = function(hash) {
     }
 
     var mergePotContents = function(a, b) {
-        var outputData = merge(parseFile(a), parseFile(b));
+        var outputData = merge([parseFile(a), parseFile(b)]);
         return outputData.toStr();
     }
 
