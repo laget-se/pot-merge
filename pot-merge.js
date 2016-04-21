@@ -52,7 +52,12 @@ Block.prototype.toStr = function() {
 }
 
 Block.prototype.hash = function() {
-    var strToHash = this.msgid + this.msgctx;
+
+    // In case of a plural block, `this.msgid` will contain both msgid and
+    // msgid_plural. Extract only msgid, since it's the unique identifier.
+    var msgid = this.msgid.length > 0 ? this.msgid[0] : [];
+    
+    var strToHash = msgid + this.msgctx;
 
     var hash = 0, i, chr, len;
     if (strToHash.length == 0) return hash;
