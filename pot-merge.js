@@ -53,9 +53,25 @@ Block.prototype.toStr = function() {
 
 Block.prototype.hash = function() {
 
+    var buildMsgid = function(arr) {
+        var msgid = '';
+        var record = false;
+        for(var i = 0; i < arr.length; i++) {
+            if(arr[i].indexOf('msgid ') >= 0) {
+                record = true;
+            } else if(arr[i].indexOf('msgid_plural') >= 0) {
+                record = false;
+            }
+
+            if(record) {
+                msgid += arr[i];
+            }
+        }
+        return msgid;
+    };
     // In case of a plural block, `this.msgid` will contain both msgid and
     // msgid_plural. Extract only msgid, since it's the unique identifier.
-    var msgid = this.msgid.length > 0 ? this.msgid[0] : [];
+    var msgid = this.msgid.length > 0 ? buildMsgid(this.msgid) : [];
     
     var strToHash = msgid + this.msgctx;
 
@@ -155,7 +171,6 @@ SetOfBlocks.prototype.getDuplicate = function(hash) {
     var parseFile = function(data) {
         var lines = data.split(/\r?\n/).reverse();
         var blocks = readBlocks(lines).sort(hashCompare);
-
         return blocks;
     }
 
