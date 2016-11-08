@@ -1,6 +1,6 @@
 {
   "name": "pot-merge",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "Use for merging of pot-files. Takes care of contexttags",
   "main": "pot-merge.js",
   "bin": "cli.js",
@@ -12,6 +12,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": ["Micke Larsson", "Emil Scherdin"],
+  "author": [
+    "Micke Larsson",
+    "Emil Scherdin"
+  ],
   "license": "ISC"
 }
