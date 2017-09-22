@@ -64,7 +64,7 @@ Block.prototype.hash = function() {
             }
 
             if(record) {
-                msgid += arr[i];
+                msgid += arr[i].replace(/\"/g, '');
             }
         }
         return msgid;
