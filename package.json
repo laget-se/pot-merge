@@ -12,9 +12,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": [
-    "Micke Larsson",
-    "Emil Scherdin"
+  "author": "Sportion Media Group AB"
+  "contributors": [
+    {
+      "name": "Alexander Wallin",
+      "email": "office@alexanderwallin.com",
+      "url": "http://alexanderwallin.com"
+    },
+    {
+      "name": "Micke Larsson"
+    }
   ],
   "license": "Apache-2.0",
   "licenses": [
