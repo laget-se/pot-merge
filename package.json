@@ -16,5 +16,11 @@
     "Micke Larsson",
     "Emil Scherdin"
   ],
-  "license": "ISC"
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ]
 }
